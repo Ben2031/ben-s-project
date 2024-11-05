@@ -1,0 +1,33 @@
+import sqlite3 as sq  
+import pandas as pd 
+
+con = sq.connect('store.db')
+
+try:
+    print('Connection established')
+except:
+    print('Connection error')
+
+cursor = con.cursor()
+
+cursor.execute('''CREATE TABLE IF NOT EXISTS Items (
+                    ItemID INTEGER, 
+                    ItemName TEXT, 
+                    ItemPrice REAL
+                 )''')
+
+cursor.execute("INSERT INTO Items VALUES (222, 'laptop', 500)")
+cursor.execute("INSERT INTO Items VALUES (2232, 'laptop', 5005660)")
+cursor.execute("INSERT INTO Items VALUES (22232, 'laptop', 500560)")
+cursor.execute("INSERT INTO Items VALUES (222322, 'laptop', 5565000)")
+
+cursor.execute("UPDATE Items SET ItemName='shoes' WHERE ItemPrice=5000")
+
+cursor.execute("SELECT * FROM Items")
+print(pd.read_sql_query("SELECT * FROM Items", con))
+
+cow = cursor.fetchall()
+for i in cow:
+    print(i[2], i[0])
+
+con.close()
