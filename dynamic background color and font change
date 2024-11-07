@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+    table, th, td {
+        border:1px solid black;
+      }
+      </style>
+    <title>Dynamic Background Color and Font Changer</title>
+</head>
+<body>
+
+    <h1 id="myh">Color</h1>
+
+    <!-- Dropdown for color selection -->
+    <label for="colorSelect">Choose a background color:</label>
+    <select id="colorSelect">
+        <option value="white">White</option>
+        <option value="lightblue">Light Blue</option>
+        <option value="lightgreen">Light Green</option>
+        <option value="lightcoral">Light Coral</option>
+        <option value="lightgrey">Light Grey</option>
+        <option value="lavender">Lavender</option>
+    </select>
+    <button onclick="changeColor()">Submit</button>
+    
+
+    <!-- Dropdown for font selection -->
+    <label for="fontSelect">Choose a font:</label>
+    <select id="fontSelect">
+        <option value="serif">Serif</option>
+        <option value="sans-serif">Sans Serif</option>
+        <option value="cursive">Script</option>
+        <option value="fantasy">Display</option>
+        <option value="monospace">Monospaced</option>
+        <option value="bloom">bloom</option>
+    </select>
+    <button onclick="changeFont()">Submit</button>
+
+
+    <h2> Different Type of fonts</h2>
+
+<table style="width:50%"> 
+    <tr>
+    
+    <th> Font Type</th>
+    <th>Colors of background </th>
+</tr>
+</table>
+<h2>  Selected colors</h2>
+<ul id="mycolor">
+    
+</ul>
+
+<h2>  Selected fontfamily</h2>
+<ul id="myfont">
+    
+</ul>
+
+    <script>
+        // Function to change background color
+        function changeColor(){ 
+            alert("Color is valid"); // Testing popup message box
+            var mycolor = document.getElementById('colorSelect').value;
+            document.body.style.backgroundColor = mycolor;  
+         //
+         const mycolorlist = document.getElementById('mycolor');
+         var mcolor = document.createElement('li');
+         mcolor.textContent = mycolor;
+         mycolorlist.appendChild(mcolor);
+
+        }
+
+        // Function to change font
+        function changeFont(){
+            alert("Font is valid");
+            var myfont = document.getElementById('fontSelect').value;
+            document.body.style.fontFamily = myfont;
+         //
+         const myfontlist = document.getElementById('myfont');
+         var mfont = document.createElement('li');
+         mfont.textContent = mfont;
+         myfontlist.appendChild(mfont);
+
+
+
+        }
+    </script>
+
+</body>
+</html>
