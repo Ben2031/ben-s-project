@@ -1,0 +1,17 @@
+# List of students
+students = ["Alice", "Bob", "Charlie", "Diana"]
+
+# Adding a new student
+students.append("Edward")
+print(students)   # Output: ['Alice', 'Bob', 'Charlie', 'Diana', 'Edward']
+
+# Removing a student
+students.remove("Charlie")
+print(students)   # Output: ['Alice', 'Bob', 'Diana', 'Edward']
+
+# Checking if a student is in the list
+if "Alice" in students:
+    print("Alice is in the class.")   # Output: Alice is in the class.
+
+# Getting the total number of students
+print("Total students:", len(students))  # Output: Total students: 4
