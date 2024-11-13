@@ -1,0 +1,17 @@
+students = {
+    "Student1": {
+        "name": "Alice",
+        "age": 20,
+        "grades": {"math": 90, "science": 85}
+    },
+    "Student2": {
+        "name": "Bob",
+        "age": 21,
+        "grades": {"math": 78, "science": 80}
+    },
+    "Student3": {
+        "name": "Charlie",
+        "age": 19,
+        "grades": {"math": 92, "science": 88}
+    }
+}
