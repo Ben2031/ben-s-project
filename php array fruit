@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+</head>
+<body>
+<?php
+$fruits=array("Banana",  "Orage", "Apple","Lemon","Pineapple");
+foreach($fruits as $val)
+{
+	echo$val."br";
+}
+?>
+
+</body>
+</html>
