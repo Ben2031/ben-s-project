@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+</head>
+<body>
+<?php
+$studentName=array("ben","yve","kevin","jemima","kethia");
+$studentMarks=array(79,78,67,70,69);
+
+print_r($studentName);
+echo "br";
+print_r($studentMarks);
+echo "br";
+?>
+
+</body>
+</html>
